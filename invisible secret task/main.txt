@@ -1,0 +1,15 @@
+iDiagramsExternalUrl = https://idia.dspvsc.xom.cloud/iDiagrams/
+ConnectionString = Server=SQLIACPRD;Database=T1BPPV;User Id=dspvuser;Password=Welldone@123;
+PermitVisionConnectionString = Server=SQLIACPRD;Database=T1BPPVP;User Id=dspvuser;Password=Welldone@123;
+PermitVisionBlobConnectionString = Server=SQLIACPRD;Database=T1BPBLOB;User Id=dspvuser;Password=Welldone@123;
+FlocServiceConnectionString = Server=SQLIACPRD;Database=T1BPFLOC;User Id=dspvuser;Password=Welldone@123;
+DeploymentCode = 0
+PermitVisionRegistrationNumberFormat = {Site}-{Sequence:9}
+#SmtpHost = 10.0.8.4
+#SmtpPort = 25
+#SmtpFrom = T1BPService@exxonmobil.com
+Kestrel:Certificates:Default:Path = C:\Users\SolutionFolder\sso.dspvsc.xom.cloud.pfx
+Kestrel:Certificates:Default:Password = PVisfun123!!
+core.allowed_file_extensions = .txt,.pdf,.png,.docx,.doc,.ppt,.pptx,.xls,.xlsx
+ReportVisionConnectionString = Server=SQLIACPRD;Database=T1BP_reporting_db;User Id=dspvuser;Password=Welldone@123;
+SolutionConfigFile = 

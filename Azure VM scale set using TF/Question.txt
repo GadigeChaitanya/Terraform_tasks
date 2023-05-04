@@ -1,0 +1,6 @@
+Please create 
+
+a vnet with 4 subnets (done)
+1 internet gateway (virtual_network_gateway)
+1 nat gateway with route table associations through Terraform
+
