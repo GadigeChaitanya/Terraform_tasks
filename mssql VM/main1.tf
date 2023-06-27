@@ -19,28 +19,28 @@ resource "azurerm_resource_group" "chaiturg" {
 }
 
 resource "azurerm_virtual_network" "chaiturg" {
-  name                = "chaiturg-VN"
+  name                = "chaitu-VN"
   address_space       = ["10.0.0.0/16"]
   location            = azurerm_resource_group.chaiturg.location
   resource_group_name = azurerm_resource_group.chaiturg.name
 }
 
 resource "azurerm_subnet" "chaiturg" {
-  name                 = "internal"
+  name                 = "chaitu-subnet"
   resource_group_name  = azurerm_resource_group.chaiturg.name
   virtual_network_name = azurerm_virtual_network.chaiturg.name
   address_prefixes     = ["10.0.0.0/24"]
 }
 
 resource "azurerm_public_ip" "chaiturg" {
-  name                = "chaiturg-PIP"
+  name                = "chaitu-PIP"
   location            = azurerm_resource_group.chaiturg.location
   resource_group_name = azurerm_resource_group.chaiturg.name
   allocation_method   = "Dynamic"
 }
 
 resource "azurerm_virtual_machine" "chaiturg" {
-  name                  = "chaiturg-VM"
+  name                  = "chaitu-VM"
   location              = azurerm_resource_group.chaiturg.location
   resource_group_name   = azurerm_resource_group.chaiturg.name
   network_interface_ids = [azurerm_network_interface.chaiturg.id]
@@ -74,7 +74,7 @@ resource "azurerm_virtual_machine" "chaiturg" {
 }
 
 resource "azurerm_network_security_group" "chaiturg" {
-  name                = "testsecuritygroup1"
+  name                = "chaitu-nsg"
   location            = azurerm_resource_group.chaiturg.location
   resource_group_name = azurerm_resource_group.chaiturg.name
 
